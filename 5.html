@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Of King</title>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s) {
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3889007748023956'); // 替换为你的 Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=3889007748023956&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center; /* 中心对齐 */
+        }
+
+        .container {
+            width: 100%; /* 容器宽度 */
+            max-width: 800px; /* 最大宽度 */
+            margin: auto; /* 居中 */
+        }
+
+        .relative {
+            position: relative; /* 设置相对定位以放置 gif 和按钮 */
+            margin-bottom: -5px; /* 调整底部间距以消除缝隙 */
+        }
+
+        .image {
+            width: 100%; /* 图片宽度自适应 */
+            height: auto; /* 高度自适应 */
+            display: block; /* 确保每个图片显示为块元素 */
+        }
+
+        .gif {
+            width: 80%; /* GIF 的宽度 */
+            position: absolute; /* 设置为绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 精确居中 */
+            z-index: 1; /* 确保 GIF 在前面 */
+        }
+
+        .cta-button {
+            padding: 10px 20px; /* 增加内边距 */
+            border-radius: 20px; /* 圆角 */
+            width: 40%; /* 按钮宽度 */
+            display: inline-block; /* 块元素 */
+            background: linear-gradient(90deg, #f8d4a6, #fdedda); /* 渐变背景 */
+            color: #181536; /* 字体颜色 */
+            font-weight: bolder; /* 加粗字体 */
+            font-size: 36px; /* 增加字体大小 */
+            text-align: center; /* 文本居中 */
+            text-decoration: none; /* 去除下划线 */
+            animation: pulse 2s infinite; /* 定义动画效果 */
+            position: absolute; /* 设置为绝对定位 */
+            bottom: 20%; /* 距离底部 20% */
+            left: 30%; /* 水平居中 */
+            transform: translate(-50%, 0); /* 精确居中 */
+            z-index: 2; /* 确保按钮在前面 */
+        }
+
+        .cta-button:hover {
+            background-color: #218838; /* 鼠标悬停时的颜色 */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* 手机适配 */
+        @media (max-width: 600px) {
+            .cta-button {
+                font-size: 24px; /* 减小字体大小 */
+                width: 50%; /* 按钮宽度增加 */
+                bottom: 15%; /* 调整按钮位置，距离底部10% */
+                left: 20%; /* 水平居中 */
+                transform: translate(-50%, 0); /* 精确居中 */
+            }
+
+            .gif {
+                width: 90%; /* 增加 GIF 的宽度 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="relative">
+            <img src="./images/1.jpg" alt="图片1" class="image" />
+            <img src="./images/4.gif" alt="GIF" class="gif" />
+            <!-- 新增的按钮 -->
+            <a href="https://discord.gg/nBcb2PCp" target="_blank" class="cta-button" onclick="fbq('track', 'ClickDiscordButton';")>免費領取指標</a>
+        </div>
+        <img src="./images/2.jpg" alt="图片2" class="image" />
+        
+        <div class="relative">
+            <img src="./images/3.jpg" alt="图片3" class="image" />
+            <!-- 新增的推特按钮 -->
+            <a href="https://x.com/Chain1028Spoon" target="_blank" class="cta-button" style="bottom: 5%;" onclick="fbq('track', 'ClickTwitterButton');">Twitter了解更多</a>
+        </div>
+    </div>
+</body>
+</html>
